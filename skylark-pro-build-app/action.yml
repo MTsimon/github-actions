@@ -1,0 +1,13 @@
+# action.yml
+name: 'Build Skylark Pro app'
+description: 'Builds an .sqfs file that can be uploaded to A Skyalrk Pro device'
+inputs:
+  app-name:  # id of input
+    description: 'What is the name of the app?'
+    required: true
+    default: 'unamed-app'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.app-name }}
