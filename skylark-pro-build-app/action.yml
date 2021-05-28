@@ -2,11 +2,11 @@
 name: 'Build Skylark Pro app'
 description: 'Builds an .sqfs file that can be uploaded to A Skyalrk Pro device'
 inputs:
-  app-name:
+  app_name:
     description: 'What is the name of the app?'
     required: true
     default: 'unamed-app'
-  root-dir:
+  rootfs:
     description: 'rootfs directory'
     required: true
     default: 'rootfs'
