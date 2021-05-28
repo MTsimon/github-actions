@@ -2,12 +2,17 @@
 name: 'Build Skylark Pro app'
 description: 'Builds an .sqfs file that can be uploaded to A Skyalrk Pro device'
 inputs:
-  app-name:  # id of input
+  app-name:
     description: 'What is the name of the app?'
     required: true
     default: 'unamed-app'
+  root-dir:
+    description: 'rootfs directory'
+    required: true
+    default: 'rootfs'
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
     - ${{ inputs.app-name }}
+    - ${{ inputs.root-dir }}
